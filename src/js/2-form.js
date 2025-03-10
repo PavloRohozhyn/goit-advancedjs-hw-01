@@ -9,18 +9,18 @@ const refs = {
 // field handler
 const formFields = form => {
   try {
-    const formDataFromLS = JSON.parse(
+    const formDataStorage = JSON.parse(
       localStorage.getItem('feedback-form-state')
     );
 
-    if (formDataFromLS === null) {
+    if (formDataStorage === null) {
       return;
     }
 
-    formData = formDataFromLS;
+    formData = formDataStorage;
 
-    Object.keys(formDataFromLS).forEach(key => {
-      form.elements[key].value = formDataFromLS[key];
+    Object.keys(formDataStorage).forEach(key => {
+      form.elements[key].value = formDataStorage[key];
     });
   } catch (err) {
     console.log(err);
