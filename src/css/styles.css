@@ -47,3 +47,70 @@
   transform: scale(1.03);
   transition: transform 0.3s ease-in-out;
 }
+
+/* form */
+
+.form-container {
+  box-sizing: border-box;
+  max-width: 408px;
+  max-height: 296px;
+  padding: 24px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  letter-spacing: 0.02em;
+}
+
+.form-feedback-label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.form-feedback-input {
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  padding: 8px 16px;
+}
+
+.form-feedback-input:hover {
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.form-feedback-input:focus {
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 1);
+}
+
+.form-feedback textarea {
+  resize: none;
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+.form-feedback button {
+  align-self: start;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background-color: rgba(78, 117, 255, 1);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+}
+
+.form-feedback button:hover,
+.form-feedback button:focus {
+  background-color: rgba(108, 140, 255, 1);
+}
