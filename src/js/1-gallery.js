@@ -80,8 +80,8 @@ gallery.innerHTML = images
 			    class="gallery-image"
 			    src="${preview}"
 			    alt="${description}"
-          width="500" 
-          height="500"
+          width="360" 
+          height="300"
 			/>
 	    </a>
     </li>

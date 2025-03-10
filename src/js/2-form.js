@@ -3,14 +3,14 @@ let formData = { email: '', message: '' };
 
 // form
 const refs = {
-  form: document.querySelector('.form-feedback'),
+  form: document.querySelector('.feedback-form'),
 };
 
 // field handler
 const formFields = form => {
   try {
     const formDataFromLS = JSON.parse(
-      localStorage.getItem('form-feedback-state')
+      localStorage.getItem('feedback-form-state')
     );
 
     if (formDataFromLS === null) {
@@ -31,7 +31,7 @@ formFields(refs.form);
 // change - handler
 const fieldChangeHandler = ({ target: formField }) => {
   formData[formField.name] = formField.value.trim();
-  localStorage.setItem('form-feedback-state', JSON.stringify(formData));
+  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 };
 // change - listener
 refs.form.addEventListener('input', fieldChangeHandler);
@@ -45,7 +45,7 @@ const formSubmitHandler = e => {
   }
   e.target.reset();
   formData = { email: '', message: '' };
-  localStorage.removeItem('form-feedback-state');
+  localStorage.removeItem('feedback-form-state');
 };
 // submit - listener
 refs.form.addEventListener('submit', formSubmitHandler);
