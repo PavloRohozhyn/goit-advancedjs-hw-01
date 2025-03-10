@@ -69,7 +69,7 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('main');
+const gallery = document.querySelector('.gallery');
 
 gallery.innerHTML = images
   .map(
@@ -80,6 +80,8 @@ gallery.innerHTML = images
 			    class="gallery-image"
 			    src="${preview}"
 			    alt="${description}"
+          width="500" 
+          height="500"
 			/>
 	    </a>
     </li>
